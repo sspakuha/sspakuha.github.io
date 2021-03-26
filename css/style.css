@@ -8637,13 +8637,6 @@ readers do not read off random characters that represent icons */
   padding: 80px 0 60px 0;
 }
 
-.info__title {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 .info__block {
   padding-top: 60px;
   overflow: hidden;
@@ -8695,8 +8688,7 @@ readers do not read off random characters that represent icons */
   -o-object-position: center;
      object-position: center;
   width: 100%;
-  height: 60vh;
-  max-width: 100%;
+  height: 55vh;
 }
 
 .slick-arrow {
@@ -8727,6 +8719,58 @@ readers do not read off random characters that represent icons */
 
 .slick-prev {
   left: 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.whyus {
+  padding: 80px 0 60px 0;
+}
+
+.whyus__title {
+  margin-bottom: 60px;
+}
+
+.whyus__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.whyus__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding: 0 10px;
+}
+
+.whyus__item {
+  margin: 0 10px;
+}
+
+.item-wu__logo {
+  font-size: 80px;
+  color: #4374cf;
+}
+
+.item-wu__title {
+  margin: 18px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.item-wu__text {
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 @media (min-width: 991.98px) {
@@ -8876,10 +8920,6 @@ readers do not read off random characters that represent icons */
     padding: 40px 15px 30px 15px;
   }
 
-  .info__title {
-    font-size: 24px;
-  }
-
   .info__block {
     padding-top: 40px;
   }
@@ -8891,6 +8931,10 @@ readers do not read off random characters that represent icons */
   .info__img {
     max-width: 200px;
     shape-margin: 2px;
+  }
+
+  .title {
+    font-size: 24px;
   }
 }
 
@@ -8911,7 +8955,7 @@ readers do not read off random characters that represent icons */
 @media (max-width: 767.98px) {
   ._container {
     max-width: 100vw;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
@@ -8921,6 +8965,7 @@ readers do not read off random characters that represent icons */
     max-width: none;
     display: block;
     text-align: center;
+    width: 100%;
   }
 
   .header__arrow {

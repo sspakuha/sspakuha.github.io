@@ -1,35 +1,12 @@
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
-var images = [];
-function preload() {
-	for (var i = 0; i < arguments.length; i++) {
-		images[i] = new Image();
-		images[i].src = preload.arguments[i];
+window.onload = function () {
+	if (!window.location.hash) {
+		window.location = window.location + '#loaded';
+		window.location.reload();
 	}
 }
-
-//-- usage --//
-preload(
-	"img/pageslider/2.jpg",
-	"img/pageslider/3.jpg",
-	"img/pageslider/4.jpg",
-	"img/pageslider/9.jpg",
-	"img/pageslider/10.jpg",
-	"img/pageslider/11.jpg",
-	"img/pageslider/12.jpg",
-)
-
-preload(
-	"img/pageslider/2.webp",
-	"img/pageslider/3.webp",
-	"img/pageslider/4.webp",
-	"img/pageslider/9.webp",
-	"img/pageslider/10.webp",
-	"img/pageslider/11.webp",
-	"img/pageslider/12.webp",
-)
-
 
 $(document).ready(function () {
 	$('.bg-slider').slick({

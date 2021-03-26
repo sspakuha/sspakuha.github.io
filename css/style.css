@@ -8255,6 +8255,8 @@ readers do not read off random characters that represent icons */
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .header__itemlink:hover {
@@ -8299,7 +8301,8 @@ readers do not read off random characters that represent icons */
   -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
   margin: 0 0 8vh 0;
-  max-width: 300px;
+  width: 320px;
+  text-align: center;
 }
 
 .header__btn:hover {
@@ -8389,6 +8392,7 @@ readers do not read off random characters that represent icons */
 }
 
 .form__btn {
+  background-color: #fff;
   margin-top: 50px;
   height: 40px;
   display: inline-block;
@@ -8515,11 +8519,11 @@ readers do not read off random characters that represent icons */
   max-width: 33.333%;
   position: relative;
   top: 100px;
-  -webkit-transition: all 0.4s ease calc(0.2s * var(--i)), -webkit-transform 0.4s ease 0s;
-  transition: all 0.4s ease calc(0.2s * var(--i)), -webkit-transform 0.4s ease 0s;
-  -o-transition: all 0.4s ease calc(0.2s * var(--i)), transform 0.4s ease 0s;
-  transition: all 0.4s ease calc(0.2s * var(--i)), transform 0.4s ease 0s;
-  transition: all 0.4s ease calc(0.2s * var(--i)), transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease calc(0.1s * var(--i)), -webkit-transform 0.4s ease 0s;
+  transition: all 0.4s ease calc(0.1s * var(--i)), -webkit-transform 0.4s ease 0s;
+  -o-transition: all 0.4s ease calc(0.1s * var(--i)), transform 0.4s ease 0s;
+  transition: all 0.4s ease calc(0.1s * var(--i)), transform 0.4s ease 0s;
+  transition: all 0.4s ease calc(0.1s * var(--i)), transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
 }
 
 .excursions__column._active {

@@ -6916,32 +6916,13 @@ body.ie ._ibg img {
   width: 100%;
 }
 
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/2.jpg"); }
-
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/3.jpg"); }
-
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/4.jpg"); }
-
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/10.jpg"); }
-
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/9.jpg"); }
-
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/11.jpg"); }
-
-._no-webp #preloadedImages{
-  background-image: url("../img/pageslider/12.jpg"); }
-
-#preloadedImages {
-  width: 0px;
-  height: 0px;
-  display: inline;
-  background-image: url();
+div#preloaded-images {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
 }
 
 .popup {
@@ -9388,20 +9369,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
             flex: 0 1 100%;
   }
 }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/2.webp); }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/3.webp); }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/4.webp); }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/10.webp); }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/9.webp); }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/11.webp); }
-
-._webp #preloadedImages{ background-image: url(../img/pageslider/12.webp); }
 
 ._webp .footer{ background: url(../img/pageslider/5.webp) center 85%/cover no-repeat; }
 

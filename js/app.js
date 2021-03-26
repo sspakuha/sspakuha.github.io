@@ -19,6 +19,7 @@ $(document).ready(function () {
 		pauseOnFocus: false,
 		cssEase: 'ease',
 		slidesToShow: 2,
+		arrows: true,
 		// slidesToScroll: 2,
 		infinite: true,
 		responsive: [

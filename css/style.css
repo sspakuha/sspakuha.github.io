@@ -8245,7 +8245,7 @@ readers do not read off random characters that represent icons */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -8691,7 +8691,8 @@ readers do not read off random characters that represent icons */
   min-width: 100%;
 }
 
-.fullscreenslider__body .slick-arrow {
+.slick-arrow {
+  z-index: 999;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -8702,19 +8703,22 @@ readers do not read off random characters that represent icons */
   height: 30px;
 }
 
-._no-webp .slick-prev{
-  background: url("../img/icons/p-left.png") center/cover no-repeat; }
-
-.slick-prev {
-  left: 30px;
-  z-index: 20;
+.slick-arrow:before {
+  color: #000 !important;
 }
 
 ._no-webp .slick-next{
-  background: url("../img/icons/p-right.png") center/cover no-repeat; }
+  background: url("../img/icons/p-right.png") center center/cover no-repeat; }
 
 .slick-next {
   right: 30px;
+}
+
+._no-webp .slick-prev{
+  background: url("../img/icons/p-left.png") center center/cover no-repeat; }
+
+.slick-prev {
+  left: 30px;
 }
 
 @media (min-width: 991.98px) {
@@ -9003,6 +9007,6 @@ readers do not read off random characters that represent icons */
 
 ._webp .lg-outer .lg-has-youtube:hover .lg-video-play{ background: url(../img/youtube-play.webp) no-repeat scroll 0 -60px transparent; }
 
-._webp .slick-prev{ background: url(../img/icons/p-left.webp) center/cover no-repeat; }
+._webp .slick-next{ background: url(../img/icons/p-right.webp) center center/cover no-repeat; }
 
-._webp .slick-next{ background: url(../img/icons/p-right.webp) center/cover no-repeat; }
+._webp .slick-prev{ background: url(../img/icons/p-left.webp) center center/cover no-repeat; }

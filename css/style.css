@@ -8906,6 +8906,18 @@ readers do not read off random characters that represent icons */
     visibility: visible;
     left: 0%;
   }
+
+  .whyus__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .whyus__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 1090px) {
@@ -9040,6 +9052,12 @@ readers do not read off random characters that represent icons */
   .item {
     width: 92vw;
     height: auto;
+  }
+
+  .whyus__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 

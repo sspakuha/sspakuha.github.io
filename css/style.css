@@ -8682,6 +8682,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fullscreenslider__slide {
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

@@ -22,6 +22,7 @@ $(document).ready(function () {
 		arrows: true,
 		// slidesToScroll: 2,
 		infinite: true,
+		lazyLoad: 'ondemand',
 		responsive: [
 			{
 				breakpoint: 1099,

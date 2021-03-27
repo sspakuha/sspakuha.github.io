@@ -8424,6 +8424,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .slick-list {
   overflow: hidden;
+  width: 100%;
 }
 
 .header {

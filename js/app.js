@@ -1,13 +1,25 @@
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
+// window.onload = function () {
+// 	if (!window.location.hash) {
+// 		window.location = window.location + '#loaded';
+// 		window.location.reload();
+// 	}
+// }
+// window.location.href
 window.onload = function () {
 	if (!window.location.hash) {
-		window.location = window.location + '#loaded';
-		window.location.reload();
+		if (window.location.href.includes('#')) {
+			window.location = window.location + 'loaded';
+			window.location.reload();
+		} else {
+			window.location = window.location + '#loaded';
+			window.location.reload();
+		}
+
 	}
 }
-
 $(document).ready(function () {
 	$('.bg-slider').slick({
 		speed: 1000,

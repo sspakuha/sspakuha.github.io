@@ -8889,9 +8889,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .info__img {
   position: relative;
   float: left;
+  shape-outside: url("../img/humminbird.png");
   shape-margin: 10px;
-  shape-outside: url("../img/humminbird.png");
-  shape-outside: url("../img/humminbird.png");
 }
 
 .fullscreenslider {

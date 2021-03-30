@@ -374,8 +374,8 @@ body.lock {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   padding-right: 50px;
-  font-family: Oswald;
-  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 100px;
   color: #ffffff;
@@ -846,28 +846,28 @@ body.lock {
   background-image: url("../img/brands/Layer.png"); }
 
 ._no-webp .ibgs-1{
-  background-image: url("../img/shop/Layer19.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-2{
-  background-image: url("../img/shop/Layer21.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-3{
-  background-image: url("../img/shop/Layer20.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-4{
-  background-image: url("../img/shop/Layer22.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-5{
   background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-6{
-  background-image: url("../img/shop/Layer23.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-7{
-  background-image: url("../img/shop/Layer24.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 ._no-webp .ibgs-8{
-  background-image: url("../img/shop/Layer26.jpg"); }
+  background-image: url("../img/shop/Layer25.jpg"); }
 
 @media (max-width: 1500px) {
   .block__text_j:after {
@@ -1177,18 +1177,18 @@ body.lock {
 
 ._webp .ibg-7{ background-image: url(../img/brands/Layer.webp); }
 
-._webp .ibgs-1{ background-image: url(../img/shop/Layer19.webp); }
+._webp .ibgs-1{ background-image: url(../img/shop/Layer25.webp); }
 
-._webp .ibgs-2{ background-image: url(../img/shop/Layer21.webp); }
+._webp .ibgs-2{ background-image: url(../img/shop/Layer25.webp); }
 
-._webp .ibgs-3{ background-image: url(../img/shop/Layer20.webp); }
+._webp .ibgs-3{ background-image: url(../img/shop/Layer25.webp); }
 
-._webp .ibgs-4{ background-image: url(../img/shop/Layer22.webp); }
+._webp .ibgs-4{ background-image: url(../img/shop/Layer25.webp); }
 
 ._webp .ibgs-5{ background-image: url(../img/shop/Layer25.webp); }
 
-._webp .ibgs-6{ background-image: url(../img/shop/Layer23.webp); }
+._webp .ibgs-6{ background-image: url(../img/shop/Layer25.webp); }
 
-._webp .ibgs-7{ background-image: url(../img/shop/Layer24.webp); }
+._webp .ibgs-7{ background-image: url(../img/shop/Layer25.webp); }
 
-._webp .ibgs-8{ background-image: url(../img/shop/Layer26.webp); }
+._webp .ibgs-8{ background-image: url(../img/shop/Layer25.webp); }

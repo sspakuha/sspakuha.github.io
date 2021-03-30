@@ -111,10 +111,10 @@ if (location.hash) {
 }
 //=================
 //Menu
-let iconMenu = document.querySelector(".icon-menu");
+let iconMenu = document.querySelector(".header__burger");
 if (iconMenu != null) {
 	let delay = 500;
-	let menuBody = document.querySelector(".menu__body");
+	let menuBody = document.querySelector(".header__list");
 	iconMenu.addEventListener("click", function (e) {
 		if (unlock) {
 			body_lock(delay);
@@ -124,8 +124,8 @@ if (iconMenu != null) {
 	});
 };
 function menu_close() {
-	let iconMenu = document.querySelector(".icon-menu");
-	let menuBody = document.querySelector(".menu__body");
+	let iconMenu = document.querySelector(".header__burger");
+	let menuBody = document.querySelector(".header__list");
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("_active");
 }
@@ -143,7 +143,7 @@ function body_lock_remove(delay) {
 	let body = document.querySelector("body");
 	if (unlock) {
 		let lock_padding = document.querySelectorAll("._lp");
-		setTimeout(() => {
+		setTimeout(function () {
 			for (let index = 0; index < lock_padding.length; index++) {
 				const el = lock_padding[index];
 				el.style.paddingRight = '0px';
@@ -390,7 +390,9 @@ for (let index = 0; index < popups.length; index++) {
 		}
 	});
 }
-function popup_open(item, video = '') {
+
+function popup_open(item, video) {
+	video = typeof video !== 'undefined' ? video : ''
 	let activePopup = document.querySelectorAll('.popup._active');
 	if (activePopup.length > 0) {
 		popup_close('', false);
@@ -408,7 +410,8 @@ function popup_open(item, video = '') {
 		history.pushState('', '', '#' + item);
 	}
 }
-function popup_close(item, bodyUnlock = true) {
+function popup_close(item, bodyUnlock) {
+	bodyUnlock = typeof bodyUnlock !== 'undefined' ? bodyUnlock : true
 	if (unlock) {
 		if (!item) {
 			for (let index = 0; index < popups.length; index++) {
@@ -449,7 +452,8 @@ document.addEventListener('keydown', function (e) {
 
 //=================
 //SlideToggle
-let _slideUp = (target, duration = 500) => {
+let _slideUp = function (target, duration) {
+	duration = typeof duration !== 'undefined' ? duration : 500;
 	target.style.transitionProperty = 'height, margin, padding';
 	target.style.transitionDuration = duration + 'ms';
 	target.style.height = target.offsetHeight + 'px';
@@ -460,7 +464,7 @@ let _slideUp = (target, duration = 500) => {
 	target.style.paddingBottom = 0;
 	target.style.marginTop = 0;
 	target.style.marginBottom = 0;
-	window.setTimeout(() => {
+	window.setTimeout(function () {
 		target.style.display = 'none';
 		target.style.removeProperty('height');
 		target.style.removeProperty('padding-top');
@@ -473,7 +477,8 @@ let _slideUp = (target, duration = 500) => {
 		target.classList.remove('_slide');
 	}, duration);
 }
-let _slideDown = (target, duration = 500) => {
+let _slideDown = function (target, duration) {
+	duration = typeof duration !== 'undefined' ? duration : 500;
 	target.style.removeProperty('display');
 	let display = window.getComputedStyle(target).display;
 	if (display === 'none')
@@ -495,7 +500,7 @@ let _slideDown = (target, duration = 500) => {
 	target.style.removeProperty('padding-bottom');
 	target.style.removeProperty('margin-top');
 	target.style.removeProperty('margin-bottom');
-	window.setTimeout(() => {
+	window.setTimeout(function () {
 		target.style.removeProperty('height');
 		target.style.removeProperty('overflow');
 		target.style.removeProperty('transition-duration');
@@ -503,7 +508,8 @@ let _slideDown = (target, duration = 500) => {
 		target.classList.remove('_slide');
 	}, duration);
 }
-let _slideToggle = (target, duration = 500) => {
+let _slideToggle = function (target, duration) {
+	duration = typeof duration !== 'undefined' ? duration : 500;
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
 		if (window.getComputedStyle(target).display === 'none') {
@@ -569,7 +575,8 @@ if (moreBlocks.length > 0) {
 				}
 				resultHeight = (type === 'start') ? itemsContentStartHeight : itemsContentHeight;
 				isScrollStart = window.innerWidth - wrapper.offsetWidth;
-				itemsContent.style.height = `${resultHeight}px`;
+
+				itemsContent.style.height = resultHeight + "px";
 			}
 
 			itemsContent.addEventListener("transitionend", updateSize, false);
@@ -597,7 +604,7 @@ if (moreBlocks.length > 0) {
 }
 //========================================
 //Animate
-function animate({ timing, draw, duration }) {
+function animate(timing, draw, duration) {
 	let start = performance.now();
 	requestAnimationFrame(function animate(time) {
 		// timeFraction изменяется от 0 до 1
@@ -676,7 +683,7 @@ if (forms.length > 0) {
 		el.addEventListener('submit', form_submit);
 	}
 }
-async function form_submit(e) {
+function form_submit(e) {
 	let btn = e.target;
 	let form = btn.closest('form');
 	let error = form_validate(form);
@@ -692,12 +699,16 @@ async function form_submit(e) {
 			e.preventDefault();
 			let formData = new FormData(form);
 			form.classList.add('_sending');
-			let response = await fetch(formAction, {
+
+			//!await fetch
+
+			let response = fetch(formAction, {
 				method: formMethod,
 				body: formData
 			});
 			if (response.ok) {
-				let result = await response.json();
+				//! await
+				let result = response.json();
 				form.classList.remove('_sending');
 				if (message) {
 					popup_open(message + '-message');
@@ -1094,7 +1105,7 @@ function inputs_init(inputs) {
 					overlayButton: 'Применить',
 					overlayPlaceholder: 'Год (4 цифры)',
 					startDay: 1,
-					formatter: (input, date, instance) => {
+					formatter: function (input, date, instance) {
 						const value = date.toLocaleDateString()
 						input.value = value
 					},
@@ -1332,7 +1343,7 @@ function scrParallax(block, scrProcent, blockHeight) {
 			const prlxItem = prlxItems[index];
 			let prlxItemAttr = (prlxItem.dataset.prlx) ? prlxItem.dataset.prlx : 3;
 			const prlxItemValue = -1 * (blockHeight / 100 * scrProcent / prlxItemAttr);
-			prlxItem.style.cssText = `transform: translateY(${prlxItemValue}px);`;
+			prlxItem.style.cssText = "transform: translateY" + prlxItemValue + "px";
 		}
 	}
 }
@@ -1486,7 +1497,8 @@ if (goto_links) {
 		});
 	}
 }
-function _goto(target_block, speed, offset = 0) {
+function _goto(target_block, speed, offset) {
+	offset = typeof offset !== 'undefined' ? offset : 0;
 	let header = '';
 	//OffsetHeader
 	//if (window.innerWidth < 992) {

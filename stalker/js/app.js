@@ -39,13 +39,27 @@ function myFunction() {
 		navbar.classList.remove("sticky");
 	}
 }
+function iOS() {
+	return [
+		'iPad Simulator',
+		'iPhone Simulator',
+		'iPod Simulator',
+		'iPad',
+		'iPhone',
+		'iPod'
+	].includes(navigator.platform)
+		// iPad on iOS 13 detection
+		|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
 
-$(window).scroll(function (event) {
-	var s = 0 - $(this).scrollTop() / 2;
-	// $('.main-screen__bg').css('transform', 'translate3d(0, ' + s + 'px, 0)');
-	$('.main-screen__bg').css('backgroundPosition', 'center ' + s + 'px');
-})
+if (iOS == false) {
+	$(window).scroll(function (event) {
+		var s = 0 - $(this).scrollTop() / 2;
+		// $('.main-screen__bg').css('transform', 'translate3d(0, ' + s + 'px, 0)');
+		$('.main-screen__bg').css('backgroundPosition', 'center ' + s + 'px');
+	})
 
+}
 
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");

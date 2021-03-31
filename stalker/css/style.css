@@ -809,6 +809,12 @@ body.lock {
   background-attachment: fixed;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .ibg-0 {
+    background-attachment: scroll;
+  }
+}
+
 ._no-webp .ibg-1 {
   background-image: url("../img/brands/Layer11.jpg"); }
 

@@ -811,7 +811,7 @@ body.lock {
 
 @supports (-webkit-touch-callout: none) {
   .ibg-0 {
-    background-attachment: scroll;
+    background-size: auto;
   }
 }
 

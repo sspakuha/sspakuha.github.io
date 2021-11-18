@@ -137,6 +137,14 @@ h6 {
           align-items: center;
 }
 
+.menu__list li:nth-child(2) {
+  padding: 0px 80px 0px 37.5px;
+}
+
+.menu__list li:nth-child(5) {
+  padding: 0px 37.5px 0px 80px;
+}
+
 .menu__list li {
   position: relative;
 }
@@ -159,7 +167,7 @@ h6 {
 }
 
 .menu__list li:nth-child(5)::after {
-  right: 20px;
+  display: none;
 }
 
 .menu__link {
@@ -181,7 +189,6 @@ h6 {
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
 .sticky {
-  position: relative;
   position: fixed;
   top: 0;
   width: 100%;
@@ -947,6 +954,14 @@ body.lock {
 @media (max-width: 900px) {
   .header {
     top: 15px;
+  }
+
+  .menu__list li:nth-child(2) {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .menu__list li:nth-child(5) {
+    padding: 0px 0 0px 0px;
   }
 
   .menu__body {

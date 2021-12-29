@@ -516,15 +516,13 @@ body._lock {
 }
 
 .skilllist__column {
-  padding: 10px;
-  background-color: #282828;
-  border-radius: 5px;
   margin: 8px;
   position: relative;
 }
 
 .skilllist__comment {
   position: absolute;
+  z-index: 100;
   top: -32px;
   width: 90%;
   left: 5%;
@@ -548,8 +546,11 @@ body._lock {
 }
 
 .skilllist__el {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  background-color: #282828;
+  border-radius: 5px;
   font-size: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,10 +565,20 @@ body._lock {
   -webkit-transition: all 0.1s ease-in 0s;
   -o-transition: all 0.1s ease-in 0s;
   transition: all 0.1s ease-in 0s;
+  position: relative;
 }
 
 .skilllist__el:hover {
   color: #910efc;
+}
+
+.skilllist__el::before {
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .preloader__block {
@@ -898,16 +909,16 @@ body._lock {
   }
 
   .skilllist__el {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     font-size: 40px;
   }
 }
 
 @media (max-width: 415px) {
   .skilllist__el {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     font-size: 30px;
   }
 }

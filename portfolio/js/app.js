@@ -46,13 +46,27 @@ let els = document.querySelectorAll('.skilllist__column');
 els.forEach(function (el) {
 	el.addEventListener('mouseenter', changeDefOver);
 	el.addEventListener('mouseleave', changeDefOut);
+	el.addEventListener('click', clicks);
 })
+
+function clicks(e) {
+	data = e.target.getAttribute('data-tech')
+
+	if (document.querySelector(".comment")) {
+		return
+	}
+
+	var newEl = document.createElement("div");
+	newEl.innerHTML = data
+	newEl.classList.add("skilllist__comment")
+	newEl.classList.add("comment")
+
+	e.target.parentNode.insertBefore(newEl, e.target)
+}
 
 
 function changeDefOver(e) {
 	data = e.toElement.childNodes[1].getAttribute('data-tech')
-
-	console.log(e.toElement.childNodes[1])
 
 	if (document.querySelector(".comment")) {
 		return

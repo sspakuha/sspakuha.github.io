@@ -144,16 +144,26 @@ h6 {
 body {
   color: #000;
   font-size: 14px;
-  background-color: #333;
-  background-image: url("../img/bgmain.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 body._lock {
   overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper {
@@ -229,6 +239,8 @@ body._lock {
   color: white;
   max-height: 70px;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 
 .header__body {
@@ -341,7 +353,6 @@ body._lock {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: -5px;
   background-color: #fff;
 }
 
@@ -360,18 +371,13 @@ body._lock {
   transition: all 0.3s ease 0s;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-
-.sticky + ._container {
-  padding-top: 70px;
-}
-
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-family: "Roboto", sans-serif;
   padding: 0 10px;
+  padding-top: 100px;
 }
 
 .block__column {

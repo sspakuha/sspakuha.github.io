@@ -1,1 +1,170 @@
-<!DOCTYPE html><html lang="ru"><head>	<title>Главная</title>	<meta charset="UTF-8">	<meta name="format-detection" content="telephone=no">	<link rel="stylesheet" href="css/style.min.css">	<link rel="shortcut icon" href="favicon.ico">	<link rel="stylesheet"		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"		integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">	<!-- <meta name="robots" content="noindex, nofollow"> -->	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->	<meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>	<div class="wrapper">		<header class="header" id="navbar">	<!-- <div class="header__content _container"> -->	<div class="header__body">		<div class="header__logo">			Portfolio		</div>		<div class="header__menu menu">			<ul class="menu__list">				<li class="menu__item active"><a href="" class="menu__link">Home</a></li>				<li class="menu__item"><a href="" class="menu__link">Skills</a></li>				<li class="menu__item"><a href="" class="menu__link">Projects</a></li>				<li class="menu__item"><a href="" class="menu__link">Contact</a></li>			</ul>		</div>		<div class="header__burger">			<span></span>			<span></span>			<span></span>		</div>	</div>	<!-- </div> --></header>		<div class="_container">			<main class="page">				<section class="home">					<div class="home__body">						<div class="block__column home__profile profile">							<div class="profile__group">								<div class="profile__name">									Tymur Domin								</div>								<div class="profile__title">									Full-Stack Developer								</div>							</div>							<div class="profile__contact">								Contact							</div>						</div>						<div class="block__column home__description description">							<div class="description__text">								“The ability to simplify means to eliminate the unnecessary so that the necessary may speak. ”								<br>								<span>- Hans Hofmann, abstract expressionist painter</span>							</div>						</div>					</div>				</section>				<section class="skill">					<div class="skill__body">						<div class="block__column skill__skills skills">							<div class="skills__title">								Skills							</div>							<div class="skills__info">								Experience and seniority are NOT the main criterias of a good programmer. They are								<b>SKILLS</b>.								Let me prove it.								I have skills, and now I am accumulating experience.								I have just completed the HARVARD Certified Courses (CS50x + CS50w), gaining 100% points on each								assignment, and two years of Computer Science study at the University in Poland.								I am full of enthusiasm and I love what I do.							</div>						</div>						<div class="block__column skill__skilllist skilllist">							<div class="skilllist__body">								<div class="skilllist__row">									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-html5"></i>										</div>									</div>									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-css3-alt"></i>										</div>									</div>									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-js"></i>										</div>									</div>									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-bootstrap"></i>										</div>									</div>								</div>								<div class="skilllist__row">									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-python"></i>										</div>									</div>									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fas fa-database"></i>										</div>									</div>									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-sass"></i>										</div>									</div>									<div class="skilllist__column">										<div class="skilllist__el">											<i class="fab fa-docker"></i>										</div>									</div>								</div>							</div>						</div>					</div>				</section>			</main>		</div>		<footer class="footer">	<div class="footer__content _container">	</div></footer>	</div>	<div class="popup popup_popup">	<div class="popup__content">		<div class="popup__body">			<div class="popup__close"></div>		</div>	</div></div><div class="popup popup_massagename-message">	<div class="popup__content">		<div class="popup__body">			<div class="popup__close"></div>		</div>	</div></div><div class="popup popup_video">	<div class="popup__content">		<div class="popup__body">			<div class="popup__close popup__close_video"></div>			<div class="popup__video _video"></div>		</div>	</div></div>	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> --><script src="js/vendors.min.js"></script><script src="js/app.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+		integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="navbar">
+	<!-- <div class="header__content _container"> -->
+	<div class="header__body">
+		<div class="header__logo">
+			Portfolio
+		</div>
+		<div class="header__menu menu">
+			<ul class="menu__list">
+				<li class="menu__item active"><a href="" class="menu__link">Home</a></li>
+				<li class="menu__item"><a href="" class="menu__link">Skills</a></li>
+				<li class="menu__item"><a href="" class="menu__link">Projects</a></li>
+				<li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+			</ul>
+		</div>
+		<div class="header__burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- </div> -->
+</header>
+		<div class="_container">
+			<main class="page">
+				<section class="home">
+					<div class="home__body">
+						<div class="block__column home__profile profile">
+							<div class="profile__group">
+								<div class="profile__name">
+									Tymur Domin
+								</div>
+								<div class="profile__title">
+									Full-Stack Developer
+								</div>
+							</div>
+							<div class="profile__contact">
+								Contact
+							</div>
+						</div>
+						<div class="block__column home__description description">
+							<div class="description__text">
+								“The ability to simplify means to eliminate the unnecessary so that the necessary may speak. ”
+								<br>
+								<span>- Hans Hofmann, abstract expressionist painter</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="skill">
+					<div class="skill__body">
+						<div class="block__column skill__skills skills">
+							<div class="skills__title">
+								Skills
+							</div>
+							<div class="skills__info">
+								Experience and seniority are NOT the main criterias of a good programmer. They are
+								<b>SKILLS</b>.
+								Let me prove it.
+								I have skills, and now I am accumulating experience.
+								I have just completed the HARVARD Certified Courses (CS50x + CS50w), gaining 100% points on each
+								assignment, and two years of Computer Science study at the University in Poland.
+								I am full of enthusiasm and I love what I do.
+							</div>
+						</div>
+						<div class="block__column skill__skilllist skilllist">
+							<div class="skilllist__body">
+								<div class="skilllist__row">
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-html5"></i>
+										</div>
+									</div>
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-css3-alt"></i>
+										</div>
+									</div>
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-js"></i>
+										</div>
+									</div>
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-bootstrap"></i>
+										</div>
+									</div>
+								</div>
+								<div class="skilllist__row">
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-python"></i>
+										</div>
+									</div>
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fas fa-database"></i>
+										</div>
+									</div>
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-sass"></i>
+										</div>
+									</div>
+									<div class="skilllist__column">
+										<div class="skilllist__el">
+											<i class="fab fa-docker"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="footer">
+	<div class="footer__content _container">
+
+	</div>
+</footer>
+	</div>
+	<div class="popup popup_popup">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_massagename-message">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_video">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close popup__close_video"></div>
+			<div class="popup__video _video"></div>
+		</div>
+	</div>
+</div>
+
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

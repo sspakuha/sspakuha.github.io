@@ -141,13 +141,15 @@ h6 {
   font-size: inherit;
 }
 
-._no-webp body{
-  background: url("/img/bgmain.png") center/cover no-repeat fixed; }
-
 body {
   color: #000;
   font-size: 14px;
   background-color: #333;
+  background-image: url("../img/bgmain.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body._lock {
@@ -697,5 +699,3 @@ body._lock {
     font-size: 30px;
   }
 }
-
-._webp body{ background: url(/img/bgmain.webp) center/cover no-repeat fixed; }

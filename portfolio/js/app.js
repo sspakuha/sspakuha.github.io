@@ -5,6 +5,7 @@ window.onload = function () {
 }
 
 
+
 burger = document.querySelector(".header__burger");
 menu = document.querySelector(".header__menu");
 header = document.querySelector(".header")
@@ -43,44 +44,26 @@ function myFunction() {
 let els = document.querySelectorAll('.skilllist__column');
 
 els.forEach(function (el) {
-	el.addEventListener('mouseover', changeDefOver);
-	el.addEventListener('mouseout', changeDefOut);
+	el.addEventListener('mouseenter', changeDefOver);
+	el.addEventListener('mouseleave', changeDefOut);
 })
 
 
 function changeDefOver(e) {
-	data = '';
+	data = e.toElement.childNodes[1].getAttribute('data-tech')
 
-	if (e.target.hasAttribute('data-tech')) {
-		data = e.target.getAttribute('data-tech')
+	console.log(e.toElement.childNodes[1])
 
-		if (document.querySelector(".comment")) {
-			return
-		}
-
-		var newEl = document.createElement("div");
-		newEl.innerHTML = data
-		newEl.classList.add("skilllist__comment")
-		newEl.classList.add("comment")
-
-		e.target.parentElement.insertBefore(newEl, e.target[0])
-	}
-	else {
-		data = e.target.parentElement.getAttribute('data-tech')
-
-		if (document.querySelector(".comment")) {
-			return
-		}
-
-		var newEl = document.createElement("div");
-		newEl.innerHTML = data
-		newEl.classList.add("skilllist__comment")
-		newEl.classList.add("comment")
-
-		e.target.parentElement.parentElement.insertBefore(newEl, e.target[0])
+	if (document.querySelector(".comment")) {
+		return
 	}
 
+	var newEl = document.createElement("div");
+	newEl.innerHTML = data
+	newEl.classList.add("skilllist__comment")
+	newEl.classList.add("comment")
 
+	e.toElement.insertBefore(newEl, e.toElement.childNodes[1])
 }
 
 function changeDefOut(e) {

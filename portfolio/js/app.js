@@ -31,3 +31,53 @@ function myFunction() {
 		navbar.classList.remove("sticky");
 	}
 }
+
+
+let els = document.querySelectorAll('.skilllist__column');
+
+els.forEach(function (el) {
+	el.addEventListener('mouseover', changeDefOver);
+	el.addEventListener('mouseout', changeDefOut);
+})
+
+
+function changeDefOver(e) {
+	data = '';
+
+	if (e.target.hasAttribute('data-tech')) {
+		data = e.target.getAttribute('data-tech')
+
+		if (document.querySelector(".comment")) {
+			return
+		}
+
+		var newEl = document.createElement("div");
+		newEl.innerHTML = data
+		newEl.classList.add("skilllist__comment")
+		newEl.classList.add("comment")
+
+		e.target.parentElement.insertBefore(newEl, e.target[0])
+	}
+	else {
+		data = e.target.parentElement.getAttribute('data-tech')
+
+		if (document.querySelector(".comment")) {
+			return
+		}
+
+		var newEl = document.createElement("div");
+		newEl.innerHTML = data
+		newEl.classList.add("skilllist__comment")
+		newEl.classList.add("comment")
+
+		e.target.parentElement.parentElement.insertBefore(newEl, e.target[0])
+	}
+
+
+}
+
+function changeDefOut(e) {
+	if (document.querySelector(".comment")) {
+		document.querySelector(".comment").remove();
+	}
+}

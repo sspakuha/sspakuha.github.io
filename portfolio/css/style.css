@@ -586,7 +586,7 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   background-color: #000;
-  z-index: 6;
+  z-index: 200;
 }
 
 .preloader {

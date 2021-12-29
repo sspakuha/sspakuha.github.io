@@ -1,6 +1,7 @@
 window.onload = function () {
 	const preloader = document.querySelectorAll('.preloader__block');
 	preloader[0].style.display = "none";
+	document.querySelector("._lock").classList.remove("_lock");
 }
 
 

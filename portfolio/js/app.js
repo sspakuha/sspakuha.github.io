@@ -1,3 +1,9 @@
+window.onload = function () {
+	const preloader = document.querySelectorAll('.preloader__block');
+	preloader[0].style.display = "none";
+}
+
+
 burger = document.querySelector(".header__burger");
 menu = document.querySelector(".header__menu");
 header = document.querySelector(".header")

@@ -653,18 +653,12 @@ function myFunction() {
 	menu.classList.remove("active");
 	header.classList.remove("active");
 
-	console.log("SO:" + (window.pageYOffset + 300));
-	console.log(document.querySelector(".contacts").offsetTop)
-
 	if (window.pageYOffset >= sticky) {
 		navbar.classList.add("sticky")
 	}
 	else {
 		navbar.classList.remove("sticky");
 	}
-
-	// console.log(window.pageYOffset)
-	// console.log("#" + document.querySelector(".contacts").offsetTop)
 
 	if ((window.pageYOffset + 300) > document.querySelector(".contacts").offsetTop) {
 		document.querySelectorAll(".menu__item").forEach(function (item) {

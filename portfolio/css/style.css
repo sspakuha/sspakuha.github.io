@@ -141,6 +141,10 @@ h6 {
   font-size: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #000;
   font-size: 14px;
@@ -148,6 +152,23 @@ body {
 
 body._lock {
   overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #333;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6b1bff;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .bg {
@@ -361,6 +382,11 @@ body._lock {
 
 .menu__link {
   color: white;
+  font-family: Roboto;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 300 !important;
+  text-transform: uppercase;
 }
 
 .sticky {
@@ -439,6 +465,7 @@ body._lock {
 }
 
 .profile__contact {
+  cursor: pointer;
   margin-top: 40px;
   margin-left: 20px;
   font-size: 20px;
@@ -448,6 +475,14 @@ body._lock {
   padding: 10px;
   max-width: 180px;
   letter-spacing: 1px;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.profile__contact:hover {
+  background-color: #fff;
+  color: black;
 }
 
 .description {
@@ -467,7 +502,7 @@ body._lock {
 }
 
 .skill__body {
-  min-height: 60vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,6 +528,10 @@ body._lock {
 .skills__title {
   font-size: 34px;
   margin-bottom: 15px;
+}
+
+.skills__info {
+  min-height: 110px;
 }
 
 .skilllist {
@@ -809,6 +848,13 @@ body._lock {
   padding: 25px 25px 0px 25px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .projects__title {
@@ -818,10 +864,14 @@ body._lock {
 }
 
 .projects__desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 50px;
   letter-spacing: 1px;
+  line-height: 110%;
 }
 
 .projects__buttons {
@@ -845,6 +895,13 @@ body._lock {
   transition: all 0.1s ease-in 0s;
 }
 
+.projects__visit a {
+  color: white;
+  -webkit-transition: all 0.1s ease-in 0s;
+  -o-transition: all 0.1s ease-in 0s;
+  transition: all 0.1s ease-in 0s;
+}
+
 .projects__visit i {
   padding-left: 8px;
   font-size: 16px;
@@ -857,7 +914,7 @@ body._lock {
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.projects__visit:hover i {
+.projects__visit:hover a i {
   color: #910efc;
 }
 
@@ -919,6 +976,30 @@ body._lock {
 
 .contacts__column a {
   color: white;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts__column a:hover {
+  text-shadow: 6px 6px 2px #000;
+}
+
+._scr-item {
+  opacity: 0;
+  -webkit-transform: translate(0, 100px);
+      -ms-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+  -webkit-transition: all 0.45s ease 0s;
+  -o-transition: all 0.45s ease 0s;
+  transition: all 0.45s ease 0s;
+}
+
+._scr-item._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 @media (max-width: 1285px) {
@@ -963,6 +1044,12 @@ body._lock {
 @media (max-width: 991.98px) {
   ._container {
     max-width: 750px;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 450px) {
+  .skill__body {
+    padding-top: 50px;
   }
 }
 
@@ -1089,6 +1176,25 @@ body._lock {
     height: 85px;
     font-size: 65px;
     padding: 10px;
+  }
+
+  .contacts {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .contacts__title {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .contacts__row {
+    margin-bottom: auto;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 

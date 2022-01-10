@@ -1,3 +1,154 @@
+window.onload = function () {
+	const preloader = document.querySelectorAll('.preloader__block');
+	preloader[0].style.display = "none";
+	document.querySelector("._lock").classList.remove("_lock");
+}
+
+
+
+burger = document.querySelector(".header__burger");
+menu = document.querySelector(".header__menu");
+header = document.querySelector(".header")
+burger.addEventListener("click", function () {
+	burger.classList.toggle("active");
+	menu.classList.toggle("active");
+	header.classList.toggle("active");
+});
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () { myFunction() };
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop + 2;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+	burger.classList.remove("active");
+	menu.classList.remove("active");
+	header.classList.remove("active");
+
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+	}
+	else {
+		navbar.classList.remove("sticky");
+	}
+
+	if ((window.pageYOffset + 300) > document.querySelector(".contacts").offsetTop) {
+		document.querySelectorAll(".menu__item").forEach(function (item) {
+			item.classList.remove("active")
+		})
+
+		document.querySelector("#contact").classList.add('active')
+	}
+	else if ((window.pageYOffset + 300) > document.querySelector(".projects").offsetTop) {
+		document.querySelectorAll(".menu__item").forEach(function (item) {
+			item.classList.remove("active")
+		})
+
+		document.querySelector("#project").classList.add('active')
+	}
+	else if ((window.pageYOffset + 400) >= document.querySelector(".skill").offsetTop) {
+		document.querySelectorAll(".menu__item").forEach(function (item) {
+			item.classList.remove("active")
+		})
+
+		document.querySelector("#skill").classList.add('active');
+	}
+	else {
+		document.querySelectorAll(".menu__item").forEach(function (item) {
+			item.classList.remove("active")
+		})
+
+		document.querySelector("#home").classList.add('active')
+	}
+}
+
+
+let els = document.querySelectorAll('.skilllist__column');
+
+els.forEach(function (el) {
+	el.addEventListener('mouseenter', changeDefOver);
+	el.addEventListener('mouseleave', changeDefOut);
+	el.addEventListener('click', clicks);
+})
+
+function clicks(e) {
+	data = e.target.getAttribute('data-tech')
+
+	if (document.querySelector(".comment")) {
+		return
+	}
+
+	var newEl = document.createElement("div");
+	newEl.innerHTML = data
+	newEl.classList.add("skilllist__comment")
+	newEl.classList.add("comment")
+
+	e.target.parentNode.insertBefore(newEl, e.target)
+}
+
+
+function changeDefOver(e) {
+	data = e.toElement.childNodes[1].getAttribute('data-tech')
+
+	if (document.querySelector(".comment")) {
+		return
+	}
+
+	var newEl = document.createElement("div");
+	newEl.innerHTML = data
+	newEl.classList.add("skilllist__comment")
+	newEl.classList.add("comment")
+
+	e.toElement.insertBefore(newEl, e.toElement.childNodes[1])
+}
+
+function changeDefOut(e) {
+	if (document.querySelector(".comment")) {
+		document.querySelector(".comment").remove();
+	}
+}
+
+// document.querySelector("body").onscroll = function () {
+// console.log(document.querySelector("html").scrollTop)
+// }
+
+
+var elements = document.getElementsByClassName("menu__link");
+
+var scrrr = function () {
+	var attribute = this.getAttribute("data-scroll");
+
+	let ch = document.querySelector("html").clientHeight;
+
+	if (attribute == "home") {
+		document.querySelector("html").scrollTo(0, 0);
+	}
+	else if (attribute == "skill") {
+		document.querySelector("html").scrollTo(0, document.querySelector(".skill").offsetTop - 30);
+	}
+	else if (attribute == "projects") {
+		document.querySelector("html").scrollTo(0, document.querySelector(".projects").offsetTop + 50);
+	}
+	else if (attribute == "contacts") {
+		document.querySelector("html").scrollTo(0, document.querySelector(".page").offsetHeight);
+	}
+};
+
+for (var i = 0; i < elements.length; i++) {
+	elements[i].addEventListener('click', scrrr, false);
+}
+
+
+document.querySelector(".profile__contact").addEventListener("click", function () {
+	document.querySelector("html").scrollTo(0, document.querySelector(".page").offsetHeight);
+})
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -619,157 +770,6 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
-window.onload = function () {
-	const preloader = document.querySelectorAll('.preloader__block');
-	preloader[0].style.display = "none";
-	document.querySelector("._lock").classList.remove("_lock");
-}
-
-
-
-burger = document.querySelector(".header__burger");
-menu = document.querySelector(".header__menu");
-header = document.querySelector(".header")
-burger.addEventListener("click", function () {
-	burger.classList.toggle("active");
-	menu.classList.toggle("active");
-	header.classList.toggle("active");
-});
-
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () { myFunction() };
-
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop + 2;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-	burger.classList.remove("active");
-	menu.classList.remove("active");
-	header.classList.remove("active");
-
-	if (window.pageYOffset >= sticky) {
-		navbar.classList.add("sticky")
-	}
-	else {
-		navbar.classList.remove("sticky");
-	}
-
-	if ((window.pageYOffset + 300) > document.querySelector(".contacts").offsetTop) {
-		document.querySelectorAll(".menu__item").forEach(function (item) {
-			item.classList.remove("active")
-		})
-
-		document.querySelector("#contact").classList.add('active')
-	}
-	else if ((window.pageYOffset + 300) > document.querySelector(".projects").offsetTop) {
-		document.querySelectorAll(".menu__item").forEach(function (item) {
-			item.classList.remove("active")
-		})
-
-		document.querySelector("#project").classList.add('active')
-	}
-	else if ((window.pageYOffset + 400) >= document.querySelector(".skill").offsetTop) {
-		document.querySelectorAll(".menu__item").forEach(function (item) {
-			item.classList.remove("active")
-		})
-
-		document.querySelector("#skill").classList.add('active');
-	}
-	else {
-		document.querySelectorAll(".menu__item").forEach(function (item) {
-			item.classList.remove("active")
-		})
-
-		document.querySelector("#home").classList.add('active')
-	}
-}
-
-
-let els = document.querySelectorAll('.skilllist__column');
-
-els.forEach(function (el) {
-	el.addEventListener('mouseenter', changeDefOver);
-	el.addEventListener('mouseleave', changeDefOut);
-	el.addEventListener('click', clicks);
-})
-
-function clicks(e) {
-	data = e.target.getAttribute('data-tech')
-
-	if (document.querySelector(".comment")) {
-		return
-	}
-
-	var newEl = document.createElement("div");
-	newEl.innerHTML = data
-	newEl.classList.add("skilllist__comment")
-	newEl.classList.add("comment")
-
-	e.target.parentNode.insertBefore(newEl, e.target)
-}
-
-
-function changeDefOver(e) {
-	data = e.toElement.childNodes[1].getAttribute('data-tech')
-
-	if (document.querySelector(".comment")) {
-		return
-	}
-
-	var newEl = document.createElement("div");
-	newEl.innerHTML = data
-	newEl.classList.add("skilllist__comment")
-	newEl.classList.add("comment")
-
-	e.toElement.insertBefore(newEl, e.toElement.childNodes[1])
-}
-
-function changeDefOut(e) {
-	if (document.querySelector(".comment")) {
-		document.querySelector(".comment").remove();
-	}
-}
-
-// document.querySelector("body").onscroll = function () {
-// console.log(document.querySelector("html").scrollTop)
-// }
-
-
-var elements = document.getElementsByClassName("menu__link");
-
-var scrrr = function () {
-	var attribute = this.getAttribute("data-scroll");
-
-	let ch = document.querySelector("html").clientHeight;
-
-	if (attribute == "home") {
-		document.querySelector("html").scrollTo(0, 0);
-	}
-	else if (attribute == "skill") {
-		document.querySelector("html").scrollTo(0, document.querySelector(".skill").offsetTop - 30);
-	}
-	else if (attribute == "projects") {
-		document.querySelector("html").scrollTo(0, document.querySelector(".projects").offsetTop + 50);
-	}
-	else if (attribute == "contacts") {
-		document.querySelector("html").scrollTo(0, document.querySelector(".page").offsetHeight);
-	}
-};
-
-for (var i = 0; i < elements.length; i++) {
-	elements[i].addEventListener('click', scrrr, false);
-}
-
-
-document.querySelector(".profile__contact").addEventListener("click", function () {
-	document.querySelector("html").scrollTo(0, document.querySelector(".page").offsetHeight);
-})
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');

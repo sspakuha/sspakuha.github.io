@@ -534,6 +534,11 @@ body::-webkit-scrollbar-thumb:hover {
   min-height: 110px;
 }
 
+.skills__info a {
+  color: white;
+  text-decoration: underline;
+}
+
 .skilllist {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
